@@ -32,6 +32,6 @@ public class ConfirmServlet extends HttpServlet {
         request.setAttribute("message", message);
         
         // 3. 完了画面へフォワード
-        request.getRequestDispatcher("/thanks.jsp").forward(request, response);
+        request.getRequestDispatcher("/confirm.jsp").forward(request, response);
     }
 }

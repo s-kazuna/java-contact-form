@@ -6,7 +6,7 @@
 	</head>
 <body>
     <h1>入力内容の確認</h1>
-		<form action="input" method="POST">
+		<form action="confirm" method="POST">
 		    名前: <input type="text" name="onamae" required><br>
 		    メール: <input type="email" name="mail_address" required><br>
 		    性別: <input type="radio" name="sex" value="男性">男性

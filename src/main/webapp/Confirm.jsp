@@ -4,17 +4,22 @@
 	<head><title>確認画面</title></head>
 <body>
     <h2>入力内容の確認</h2>
-    <p>お名前: ${oname}</p>
+    <p>お名前: ${onamae}</p>
     <p>メール: ${mail_address}</p>
     <p>性別: ${sex}</p>
-    <p>お問い合わせ種別: 
-        <%-- 配列を展開して表示 --%>
-        ${cates != null ? String.join(", ", cates) : ""}
-    </p>
+    <p>お問い合わせ種別:
+		<%
+		    String[] cates = (String[])request.getAttribute("cates");
+		    if (cates != null) {
+		        out.print(String.join(", ", cates));
+		    }
+		%>
+	</p>
+    
     <p>住まいエリア: ${pref}</p>
     <p>内容:<br><pre>${message}</pre></p>
 
-    <form action="confirm" method="POST">
+    <form action="thanks" method="POST">
         <input type="hidden" name="onamae" value="${oname}">
         <input type="hidden" name="mail_address" value="${mail_address}">
         <input type="hidden" name="sex" value="${sex}">
