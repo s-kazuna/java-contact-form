@@ -14,7 +14,7 @@
     <p>住まいエリア: ${pref}</p>
     <p>内容:<br><pre>${message}</pre></p>
 
-    <form action="thanks" method="POST">
+    <form action="confirm" method="POST">
         <input type="hidden" name="onamae" value="${oname}">
         <input type="hidden" name="mail_address" value="${mail_address}">
         <input type="hidden" name="sex" value="${sex}">
