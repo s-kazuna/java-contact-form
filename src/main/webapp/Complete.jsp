@@ -13,8 +13,14 @@
 		<p>メールアドレス:${mail_address }</p>
 		<p>住まいエリア: ${pref}</p>
 		<p>お問い合わせ種別:</p>
-   
-    <p>内容:<br><pre>${message}</pre></p>
+            <%
+            String[] cates = (String[])request.getAttribute("cates");
+            if (cates != null) {
+                out.print(String.join(", ", cates));
+            }
+       		%>
+       		
+    	<p>内容:<br><pre>${message}</pre></p>
 		<div class = "message-layout">
 			${message }
 		</div>
