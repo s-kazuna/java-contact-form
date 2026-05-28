@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head><title>確認画面</title></head>
+	 <link rel="stylesheet" href="css/css-layout.css">
 <body>
     <h2>入力内容の確認</h2>
     <p>お名前: ${onamae}</p>
