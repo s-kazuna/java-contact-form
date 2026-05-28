@@ -1,4 +1,4 @@
-package Input_Page; // フォルダ構成に合わせて「input」にする
+package Input_Page;
 
 import java.io.IOException;
 

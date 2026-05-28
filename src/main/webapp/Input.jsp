@@ -14,6 +14,9 @@
 		    お問い合わせ種別: 
 		          <input type="checkbox" name="cates" value="製品について">製品について
 		          <input type="checkbox" name="cates" value="サービスについて">サービスについて<br>
+		          <input type="checkbox" name="cates" value="採用について">採用について
+		          <input type="checkbox" name="cates" value="その他">その他<br>
+		          
 		    住まいエリア: 
 		          <select name="pref">
 		              <option value="北海道">北海道</option>
