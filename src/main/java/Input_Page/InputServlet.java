@@ -23,7 +23,6 @@ public class InputServlet extends HttpServlet {
         
         request.setCharacterEncoding("UTF-8");
 
-        // データ取得
         String oname = request.getParameter("oname");
         String mail = request.getParameter("mail_address");
         String sex = request.getParameter("sex");
@@ -31,7 +30,6 @@ public class InputServlet extends HttpServlet {
         String pref = request.getParameter("pref");
         String message = request.getParameter("message");
 
-        // 確認画面へ渡すためのセット
         request.setAttribute("oname", oname);
         request.setAttribute("mail_address", mail);
         request.setAttribute("sex", sex);
@@ -40,7 +38,7 @@ public class InputServlet extends HttpServlet {
         request.setAttribute("message", message);
 
         // confirm.jsp へ移動
-        request.getRequestDispatcher("/confirm.jsp").forward(request, response);
+        request.getRequestDispatcher("/Confirm.jsp").forward(request, response);
     }
 }
 

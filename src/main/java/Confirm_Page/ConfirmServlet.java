@@ -15,7 +15,6 @@ public class ConfirmServlet extends HttpServlet {
         
         request.setCharacterEncoding("UTF-8");
 
-        // 1. 全項目を取得
         String onamae = request.getParameter("onamae");
         String mail = request.getParameter("mail_address");
         String sex = request.getParameter("sex");
@@ -23,7 +22,6 @@ public class ConfirmServlet extends HttpServlet {
         String pref = request.getParameter("pref");
         String message = request.getParameter("message");
 
-        // 2. 完了画面へ引き継ぐためにセット
         request.setAttribute("onamae", onamae);
         request.setAttribute("mail_address", mail);
         request.setAttribute("sex", sex);
@@ -31,7 +29,7 @@ public class ConfirmServlet extends HttpServlet {
         request.setAttribute("pref", pref);
         request.setAttribute("message", message);
         
-        // 3. 完了画面へフォワード
-        request.getRequestDispatcher("/confirm.jsp").forward(request, response);
+        // 完了画面へ
+        request.getRequestDispatcher("/Confirm.jsp").forward(request, response);
     }
 }
