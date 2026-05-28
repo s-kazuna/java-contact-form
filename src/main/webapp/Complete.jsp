@@ -8,6 +8,6 @@
 	</head>
 	<body>
 		<h1>お問い合わせありがとうございます。</h1>
-		<a href="input.jsp">TOPへ戻る</a>
+		<a href="Java_Contact_Form/input.jsp">TOPへ戻る</a>
 	</body>
 </html>
