@@ -33,12 +33,11 @@ public class InputServlet extends HttpServlet {
         request.setAttribute("oname", oname);
         request.setAttribute("mail_address", mail);
         request.setAttribute("sex", sex);
-        request.setAttribute("cates", cates);
         request.setAttribute("pref", pref);
+        request.setAttribute("cates", cates);
         request.setAttribute("message", message);
 
         // confirm.jsp へ移動
         request.getRequestDispatcher("/Confirm.jsp").forward(request, response);
     }
 }
-

@@ -7,6 +7,7 @@
     <p>お名前: ${onamae}</p>
     <p>メール: ${mail_address}</p>
     <p>性別: ${sex}</p>
+   	<p>住まいエリア: ${pref}</p>
     <p>お問い合わせ種別:
 		<%
 		    String[] cates = (String[])request.getAttribute("cates");
@@ -16,17 +17,17 @@
 		%>
 	</p>
     
-    <p>住まいエリア: ${pref}</p>
+
     <p>内容:<br><pre>${message}</pre></p>
 
     <form action="thanks" method="POST">
-        <input type="hidden" name="onamae" value="${oname}">
+        <input type="hidden" name="onamae" value="${onamae}">
         <input type="hidden" name="mail_address" value="${mail_address}">
         <input type="hidden" name="sex" value="${sex}">
+        <input type="hidden" name="pref" value="${pref}">
         <c:forEach var="cate" items="${cates}">
             <input type="hidden" name="cates" value="${cate}">
         </c:forEach>
-        <input type="hidden" name="pref" value="${pref}">
         <input type="hidden" name="message" value="${message}">
 
         <input type="button" value="戻る" onclick="history.back()">

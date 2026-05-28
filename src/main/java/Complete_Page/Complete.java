@@ -15,9 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 public class Complete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public Complete() {
         super();
         // TODO Auto-generated constructor stub
@@ -36,6 +33,22 @@ public class Complete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+		
+			String onamae = request.getParameter("onamae");
+	        String mail = request.getParameter("mail_address");
+	        String sex = request.getParameter("sex");
+	        String[] cates = request.getParameterValues("cates");
+	        String pref = request.getParameter("pref");
+	        String message = request.getParameter("message");
+	
+	        request.setAttribute("onamae", onamae);
+	        request.setAttribute("mail_address", mail);
+	        request.setAttribute("sex", sex);
+	        request.setAttribute("pref", pref);
+	        request.setAttribute("cates", cates);
+	        request.setAttribute("message", message);
+	        
 		request.getRequestDispatcher("/Complete.jsp").forward(request,response);
 	}
 }
