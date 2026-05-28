@@ -4,12 +4,16 @@
 	<head><title>確認画面</title></head>
 <body>
     <h2>入力内容の確認</h2>
-    <p>お名前: ${oname}</p>
+    <p>お名前: ${onamae}</p>
     <p>メール: ${mail_address}</p>
     <p>性別: ${sex}</p>
     <p>お問い合わせ種別: 
-        <%-- 配列を展開して表示 --%>
-        ${cates != null ? String.join(", ", cates) : ""}
+      	<%
+		    String[] cates = (String[])request.getAttribute("cates");
+		    if (cates != null) {
+		        out.print(String.join(", ", cates));
+		    }
+		%>
     </p>
     <p>住まいエリア: ${pref}</p>
     <p>内容:<br><pre>${message}</pre></p>
