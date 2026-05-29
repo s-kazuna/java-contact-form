@@ -18,7 +18,19 @@ public class ConfirmServlet extends HttpServlet {
         String onamae = request.getParameter("onamae");
         String mail = request.getParameter("mail_address");
         String sex = request.getParameter("sex");
-        String[] cates = request.getParameterValues("cates"); 
+        String[] cates = request.getParameterValues("cates");
+        String catesString = "";
+        if (cates != null) {
+            for (int i = 0; i < cates.length; i++) {
+                catesString += cates[i];
+                if (i < cates.length - 1) {
+                    catesString += ", ";
+                }
+            }
+        } else {
+            catesString = "選択なし";
+        }
+
         String pref = request.getParameter("pref");
         String message = request.getParameter("message");
 
@@ -26,7 +38,7 @@ public class ConfirmServlet extends HttpServlet {
         request.setAttribute("mail_address", mail);
         request.setAttribute("sex", sex);
         request.setAttribute("pref", pref);
-        request.setAttribute("cates", cates);
+        request.setAttribute("cates", catesString);
         request.setAttribute("message", message);
         
         // 完了画面へ

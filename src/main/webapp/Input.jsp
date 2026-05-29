@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>お問い合わせ</title>
-    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/layout.css">
 </head>
 <body>
     <h1>お問い合わせ</h1>

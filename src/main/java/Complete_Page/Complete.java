@@ -35,18 +35,30 @@ public class Complete extends HttpServlet {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
 		
-			String onamae = request.getParameter("onamae");
-	        String mail = request.getParameter("mail_address");
-	        String sex = request.getParameter("sex");
-	        String[] cates = request.getParameterValues("cates");
-	        String pref = request.getParameter("pref");
-	        String message = request.getParameter("message");
+		String onamae = request.getParameter("onamae");
+        String mail = request.getParameter("mail_address");
+        String sex = request.getParameter("sex");
+        String[] cates = request.getParameterValues("cates");
+        String catesString = "";
+        if (cates != null) {
+            for (int i = 0; i < cates.length; i++) {
+                catesString += cates[i];
+                if (i < cates.length - 1) {
+                    catesString += ", ";
+                }
+            }
+        } else {
+            catesString = "選択なし";
+        }
+
+        String pref = request.getParameter("pref");
+        String message = request.getParameter("message");
 	
 	        request.setAttribute("onamae", onamae);
 	        request.setAttribute("mail_address", mail);
 	        request.setAttribute("sex", sex);
 	        request.setAttribute("pref", pref);
-	        request.setAttribute("cates", cates);
+	        request.setAttribute("cates", catesString);
 	        request.setAttribute("message", message);
 	        
 		request.getRequestDispatcher("/Complete.jsp").forward(request,response);
