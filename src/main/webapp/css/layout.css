@@ -19,25 +19,36 @@ label {
   margin-bottom: 8px;
 }
 
-/* 入力欄（input, select, textarea） */
+/* 入力欄（input, select, textarea, 確認画面のpタグ） */
 .form-control {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
+  background-color: #fff;
 }
 
-/* ラジオ・チェックボックスのラベル調整 */
-.radio-label, .check-label {
+/* ラジオボタン */
+.radio-label {
   display: inline-block;
   margin-right: 15px;
   font-weight: normal;
   cursor: pointer;
 }
 
-/* 送信ボタン */
+/* チェックボックス */
+.check-label {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* 送信ボタン・リンクボタン */
 .submit-btn {
+  display: block;
+  margin: 20px auto;
   padding: 12px 24px;
   background-color: #2c3e50;
   color: #fff;
@@ -45,8 +56,31 @@ label {
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  text-align: center;
 }
 
 .submit-btn:hover {
   background-color: #34495e;
+}
+
+/* 確認画面用：pタグのスタイル調整 */
+p.form-control {
+  margin: 0;
+  background-color: #f4f4f4; 
+}
+
+.pre-wrap {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	color: rgb(72, 72, 72);
+}
+.complete-message {
+	text-align: center;
+	margin-top: 50px;
 }
